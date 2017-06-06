@@ -5,8 +5,8 @@
 
 int main(int argc, char *argv[])
 {
+	qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));
     QApplication a(argc, argv);
     Game::Instance().run();
-    qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));
     return a.exec();
 }
